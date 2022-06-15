@@ -1,0 +1,16 @@
+name: output
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      random: ${{ steps.generate-random.outputs.random }}
+    steps:
+      - id: generate-random
+      run: echo "::set-output name=random::$(openssl rand -base64 12)"
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - run: echo "${{ needs.job1.outputs.random }}"
