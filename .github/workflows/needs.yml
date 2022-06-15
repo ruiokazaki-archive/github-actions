@@ -9,7 +9,7 @@ jobs:
       - run: exit 0
   failed:
     name: 失敗します
-    # continue-on-error: true
+    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - run: exit 1
