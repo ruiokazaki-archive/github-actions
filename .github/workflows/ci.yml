@@ -1,9 +1,12 @@
+# github上での名前(省略可)
 name: Contiunuous Integration
+# 複数イベント指定
+# on: [push, pull_request]
 on: push
 
 jobs:
   unit-test:
-    name: Unit Test
+    name: ユニットテスト
     runs-on: ubuntu-latest
     steps:
       # git checkout し、好きな場所
