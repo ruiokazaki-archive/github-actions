@@ -1,0 +1,21 @@
+name: needs
+on: push
+
+jobs:
+  success:
+    name: 成功します
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
+  failed:
+    name: 失敗します
+    # continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
+  deploy:
+    needs: [success, failed]
+    name: デプロイ！
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo deploy
