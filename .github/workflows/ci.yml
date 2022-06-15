@@ -51,3 +51,5 @@ jobs:
           npm ci
           npm run lint
           npm test
+        working-directory: /test
+          run: ls
