@@ -7,7 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        curl \
-        --request GET \
-        --url https://api.github.com/repos/${{ github.repository }}/issues \
-        --header 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
+        echo ${{ github.repository }}
+        echo ${{ secrets.GITHUB_TOKEN }}
+      # - run: |
+      #   curl \
+      #   --request GET \
+      #   --url https://api.github.com/repos/${{ github.repository }}/issues \
+      #   --header 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'
