@@ -4,6 +4,7 @@ on: push
 jobs:
   curl:
     name: github curl
+    runs-on: ubuntu-latest
     steps:
       - run: |
         curl \
