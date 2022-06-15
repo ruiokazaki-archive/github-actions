@@ -1,0 +1,26 @@
+{
+  "name": "fizz-buzz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OkazakiRui/github-actions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OkazakiRui/github-actions/issues"
+  },
+  "homepage": "https://github.com/OkazakiRui/github-actions#readme",
+  "devDependencies": {
+    "@cybozu/eslint-config": "^17.0.1",
+    "eslint": "^8.17.0",
+    "mocha": "^10.0.0",
+    "prettier": "^2.7.0"
+  }
+}
