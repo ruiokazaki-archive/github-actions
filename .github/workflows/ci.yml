@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v2.0.0
       # nodejs のバージョンを12系にする
       - name: Set Node.js 12.x
-        uses: actions/setup-node@v1.3.0
+        uses: actions/setup-node@v3
         with:
           node-version: 12.x
       # lock.jsonを見てinstallすることでいつもより早くnode_modulesをインストールできる
@@ -26,7 +26,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.0.0
       - name: Set Node.js 12.x
-        uses: actions/setup-node@v1.3.0
+        uses: actions/setup-node@v3
         with:
           node-version: 12.x
       - name: Install dependencies
