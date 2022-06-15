@@ -6,4 +6,4 @@ jobs:
     name: github curl
     runs-on: ubuntu-latest
     steps:
-      - run: curl -i -u OkazakiRui:${{ secrets.GITHUB_TOKEN }} https://api.github.com/user
+      - run: curl -i -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/user/repos
