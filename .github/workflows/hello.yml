@@ -1,0 +1,14 @@
+# ワークフローの名前
+name: Hello, World!
+# 実行される起点の設定
+on: push
+
+jobs:
+  # 名前はなんでも良いが、ユニークである必要がある
+  build:
+    # job名
+    name: Greeting
+    runs-on: ubuntu-latest
+    # job内で実行される処理を定義する
+    steps:
+      - run: echo "Hello, World!"
