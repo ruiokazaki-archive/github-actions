@@ -8,7 +8,7 @@ jobs:
       random: ${{ steps.generate-random.outputs.random }}
     steps:
       - id: generate-random
-      run: echo "::set-output name=random::$(openssl rand -base64 12)"
+        srun: echo "::set-output name=random::$(openssl rand -base64 12)"
   job2:
     runs-on: ubuntu-latest
     needs: job1
