@@ -1,0 +1,20 @@
+name: security audit
+on:
+  schedule:
+    - cron: '0/5 * * * *'
+
+jobs:
+  audit:
+    name: security audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+      - name: set nodejs v12.x
+        uses: actions/setup-node@3
+        with:
+          node-version: 12.x
+      - name: Install devDependencies
+        run: npm ci
+      - name: audit
+        run: npm audit
