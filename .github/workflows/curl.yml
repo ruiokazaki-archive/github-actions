@@ -6,5 +6,4 @@ jobs:
     name: github curl
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        curl -X GET "https://example.com/api/v2/endpoint"
+      - run: curl -X GET "https://example.com/api/v2/endpoint"
