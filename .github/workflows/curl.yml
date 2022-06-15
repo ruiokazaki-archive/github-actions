@@ -6,9 +6,7 @@ jobs:
     name: github curl
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        echo ${{ github.api_url }}
-        echo ${{ secrets.GITHUB_TOKEN }}
+      - run: echo ${{ github.api_url }}
       # - run: |
       #   curl \
       #   --request GET \
