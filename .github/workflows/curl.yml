@@ -6,6 +6,7 @@ jobs:
     name: github curl
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
       - run: |
         echo ${{ github.repository }}
         echo ${{ secrets.GITHUB_TOKEN }}
