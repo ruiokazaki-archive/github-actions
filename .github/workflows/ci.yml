@@ -36,3 +36,18 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
+  lint-and-test:
+    name: lint and test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Set Node.js 12.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 12.x
+      - name: ci and lint and test
+        run: |
+          npm ci
+          npm run lint
+          npm test
